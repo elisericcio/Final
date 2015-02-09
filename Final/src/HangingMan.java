@@ -3,46 +3,47 @@ public class HangingMan
 {
 	public static void stepsToHang()
 		{
-		System.out.println(PersonsPick.wrongCounter);
-		if (PersonsPick.wrongCounter == 9)
+		System.out.println(PersonsPick.wrongGuessCounter);
+		if (PersonsPick.guessesCounter == 9)
 			{
 			firstHang();
 			}
-		if (PersonsPick.wrongCounter ==8)
+		if (PersonsPick.guessesCounter ==8)
 			{
 			secondHang();
 			}
-		if (PersonsPick.wrongCounter ==7)
+		if (PersonsPick.guessesCounter ==7)
 			{
 			thirdHang();
 			}
-		if (PersonsPick.wrongCounter ==6)
+		if (PersonsPick.guessesCounter ==6)
 			{
 			forthHang();
 			}
-		if (PersonsPick.wrongCounter ==5)
+		if (PersonsPick.guessesCounter ==5)
 			{
 			fithHang();
 			}
-		if (PersonsPick.wrongCounter ==4)
+		if (PersonsPick.guessesCounter ==4)
 			{
 			sixthHang();
 			}
-		if (PersonsPick.wrongCounter ==3)
+		if (PersonsPick.guessesCounter ==3)
 			{
 			seventhHang();
 			}
-		if (PersonsPick.wrongCounter ==2)
+		if (PersonsPick.guessesCounter ==2)
 			{
 			eighthHang();
 			}
-		if (PersonsPick.wrongCounter ==1)
+		if (PersonsPick.guessesCounter ==1)
 			{
 			ninethHang();
 			}
-		if (PersonsPick.wrongCounter ==0)
+		if (PersonsPick.guessesCounter ==0)
 			{
 			tenthHang();
+			System.out.println("You killed him. Game over!");
 			}
 		}
 	public static void firstHang()
