@@ -15,7 +15,7 @@ public class PersonsPick
 				askForGuess();
 				System.out.println(PickWord.pickedWord);
 				checkGuess();
-				//checkForWin();
+				checkForWin();
 				}
 			if(guessesCounter> 10)
 				{
@@ -40,6 +40,7 @@ public class PersonsPick
 				{
 				PickWord.theWord.set(i, guess);
 				}
+
 			}
 				wrongGuessCounter ++;
 				guessesCounter--;	
@@ -47,21 +48,20 @@ public class PersonsPick
 				System.out.println("You have " + guessesCounter + " guesses left, to save his life!");
 				HangingMan.stepsToHang();
 			
-				
 			}
 		
 			
 			
-	//public static void checkForWin()
+	public static void checkForWin()
 		{
 		Scanner userInput = new Scanner(System.in);
 		guess = userInput.nextLine();
 		for(int i =0; i < PickWord.pickedWord.length(); i++)
 			{
-			if(guess!= ("_"))
+			if(!PickWord.theWord.contains("_"))
 				{
 				System.out.println("Game over.");
-				//System.exit(0);
+				System.exit(0);
 				}
 			}
 		}
